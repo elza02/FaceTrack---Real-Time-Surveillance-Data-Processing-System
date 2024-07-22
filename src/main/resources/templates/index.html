@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Image Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333333;
+            margin-bottom: 1em;
+        }
+        input[type="file"] {
+            display: block;
+            margin: 1em auto;
+            padding: 1em;
+            border: 2px dashed #cccccc;
+            border-radius: 4px;
+            width: calc(100% - 2em);
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p {
+            color: #ff0000;
+            font-size: 1em;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload an Image</h1>
+        <form method="post" enctype="multipart/form-data" th:action="@{/upload}">
+            <input type="file" name="file" required />
+            <button type="submit">Upload</button>
+        </form>
+        <p th:if="${message}" th:text="${message}"></p>
+    </div>
+</body>
+</html>
+<!--
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Image Upload</title>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form method="post" enctype="multipart/form-data" th:action="@{/upload}">
+        <input type="file" name="file" required />
+        <button type="submit">Upload</button>
+    </form>
+    <p th:if="${message}" th:text="${message}"></p>
+</body>
+</html>
+-->
