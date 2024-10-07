@@ -16,7 +16,7 @@ FaceTrack is a real-time surveillance data processing system that leverages faci
 
 ## TO RUN THE APP,
 
-## 1. Zookepper and Kafka
+  1. Zookepper and Kafka
     - run terminal
     - cd yourPath/kafka
     - run:
