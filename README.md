@@ -54,7 +54,3 @@ Ensure you have Apache Zookeeper, Kafka, and a working setup of the application 
       ```
 
 The application should now be up and running, processing real-time data streams through Kafka and Spark, while interacting with the facial recognition API to deliver instant insights.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
